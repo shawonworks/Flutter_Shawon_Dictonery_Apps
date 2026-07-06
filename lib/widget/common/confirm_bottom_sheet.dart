@@ -17,7 +17,7 @@ class ConfirmBottomSheet {
         padding: EdgeInsets.fromLTRB(AppSpacing.s5.w, AppSpacing.s3.h, AppSpacing.s5.w, AppSpacing.s8.h),
         decoration: BoxDecoration(
           color: AppColors.bgPaperRaised,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadius.lg)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.lg)),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -35,6 +35,7 @@ class ConfirmBottomSheet {
                   child: CustomElevatedButton(
                     onPressed: () => Get.back(result: false),
                     isOutLined: true,
+                    elevation: 0,
                     outLineColour: AppColors.ink100,
                     height: 48,
                     buttonBorderRadius: AppRadius.lg,
