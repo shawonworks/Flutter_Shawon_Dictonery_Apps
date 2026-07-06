@@ -65,13 +65,14 @@ class AppTypography {
   static TextStyle labelSm({Color? color}) => _base(GoogleFonts.inter,
       size: 12, lineHeight: 16, weight: FontWeight.w500, color: color);
 
-  static TextStyle monoPhonetic({Color? color}) => _base(
-        GoogleFonts.ibmPlexMono,
-        size: 15,
-        lineHeight: 20,
-        weight: FontWeight.w400,
-        color: color,
-      ).copyWith(fontFamilyFallback: ['Noto Sans', 'Arial Unicode MS']);
+  static TextStyle monoPhonetic({Color? color}) {
+    final base = _base(
+      GoogleFonts.ibmPlexMono,
+      size: 15, lineHeight: 20, weight: FontWeight.w400, color: color,
+    );
+    final notoFamily = GoogleFonts.notoSans().fontFamily; // actually fetches/registers it
+    return base.copyWith(fontFamilyFallback: [if (notoFamily != null) notoFamily]);
+  }
 
   static TextStyle buttonMd({Color? color}) => _base(GoogleFonts.inter,
       size: 15, lineHeight: 20, weight: FontWeight.w600, color: color);

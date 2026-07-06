@@ -10,16 +10,18 @@ import '../../data/repositories/word_cache_repository.dart';
 import '../theme/theme_controller.dart';
 import '../theme/text_scale_controller.dart';
 
-/// Registered once at app start. Repositories and cross-screen
-/// controllers live here as permanent singletons so every module
-/// (Home, Word Detail, Favorites, History, Settings) shares one
-/// source of truth instead of re-reading SharedPreferences separately.
+import 'dart:convert';
+import 'package:dio/dio.dart';
+// ...existing imports
+
 class InitialBinding extends Bindings {
   @override
   void dependencies() {
     final dio = Dio(
       BaseOptions(connectTimeout: const Duration(seconds: 10), receiveTimeout: const Duration(seconds: 10)),
-    );
+    )..options.responseDecoder = (List<int> responseBytes, RequestOptions options, ResponseBody responseBody) {
+      return utf8.decode(responseBytes, allowMalformed: true);
+    };
     Get.put<Dio>(dio, permanent: true);
 
     Get.put(WordCacheRepository(), permanent: true);

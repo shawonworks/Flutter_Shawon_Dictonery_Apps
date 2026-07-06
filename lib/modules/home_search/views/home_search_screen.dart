@@ -283,6 +283,7 @@ class _NoResults extends StatelessWidget {
               : [
                   Wrap(
                     alignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     spacing: AppSpacing.s2.w,
                     runSpacing: AppSpacing.s2.h,
                     children: controller.suggestions
