@@ -14,4 +14,9 @@ class AppRoutes {
   //////////////// Settings ///////////////////////
   static const themePickerScreen = '/themePickerScreen';
   static const textSizeScreen = '/textSizeScreen';
+
+  /////////////Ielts/////////////
+  static const ieltsHubScreen = '/ieltsHubScreen';
+  static const ieltsTopicPickerScreen = '/ieltsTopicPickerScreen';
+  static const ieltsWordListScreen = '/ieltsWordListScreen';
 }

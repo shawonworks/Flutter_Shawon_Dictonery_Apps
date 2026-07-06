@@ -151,7 +151,10 @@ class _HomeContent extends StatelessWidget {
           final word = controller.wordOfTheDay.value;
           if (word == null) return const SizedBox.shrink();
           return _WordOfTheDayCard(entry: word, onTap: () => onOpenWord(word.headword));
+
         }),
+        SizedBox(height: AppSpacing.s4.h),
+        const _IeltsPromoCard(),
         SizedBox(height: AppSpacing.s6.h),
         Obx(() {
           if (controller.recentSearches.isEmpty) return const SizedBox.shrink();
@@ -236,6 +239,44 @@ class _WordOfTheDayCard extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+class _IeltsPromoCard extends StatelessWidget {
+  const _IeltsPromoCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Get.toNamed(AppRoutes.ieltsHubScreen),
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.all(AppSpacing.s4.w),
+        decoration: BoxDecoration(
+          color: AppColors.sageDim,
+          borderRadius: BorderRadius.circular(AppRadius.md),
+        ),
+        child: Row(
+          children: [
+            Icon(Icons.workspace_premium_rounded, size: 28.sp, color: AppColors.sage),
+            SizedBox(width: AppSpacing.s3.w),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('IELTS Prep', style: AppTypography.h2()),
+                  SizedBox(height: 2.h),
+                  Text(
+                    'Topic vocabulary, synonyms & Cambridge word bank',
+                    style: AppTypography.bodyMd(color: AppColors.ink500),
+                  ),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right, size: 20.sp, color: AppColors.ink500),
           ],
         ),
       ),

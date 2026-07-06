@@ -1,4 +1,9 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import '../modules/ielts/hub/views/ielts_hub_screen.dart';
+import '../modules/ielts/hub/views/ielts_topic_picker_binding.dart';
+import '../modules/ielts/hub/views/ielts_topic_picker_screen.dart';
+import '../modules/ielts/hub/views/ielts_word_list_binding.dart';
+import '../modules/ielts/hub/views/ielts_word_list_screen.dart';
 import 'app_routes.dart';
 import '../modules/splash/views/splash_screen.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
@@ -21,5 +26,19 @@ List<GetPage> appRouteFile = <GetPage>[
     name: AppRoutes.wordDetailScreen,
     page: () => const WordDetailScreen(),
     binding: WordDetailBinding(),
+  ),
+
+
+  //////////IELTS //////////
+  GetPage(name: AppRoutes.ieltsHubScreen, page: () => const IeltsHubScreen()),
+  GetPage(
+    name: AppRoutes.ieltsTopicPickerScreen,
+    page: () => const IeltsTopicPickerScreen(),
+    binding: IeltsTopicPickerBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.ieltsWordListScreen,
+    page: () => const IeltsWordListScreen(),
+    binding: IeltsWordListBinding(),
   ),
 ];
