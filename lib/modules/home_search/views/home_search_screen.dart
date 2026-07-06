@@ -12,7 +12,6 @@ import '../../../widget/common/skeleton_loader.dart';
 import '../../../widget/dictionary/headword_row.dart';
 import '../../../widget/dictionary/pos_chip.dart';
 import '../../../widget/dictionary/section_label.dart';
-import '../../../widget/dictionary/squiggle_underline.dart';
 import '../../../widget/dictionary/word_result_row.dart';
 import '../controllers/home_search_controller.dart';
 
@@ -272,26 +271,24 @@ class _NoResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Obx(
-        () => EmptyStateWidget(
-          icon: Icons.search_off_rounded,
-          title: ConstString.noMatchesFor.replaceAll('%s', controller.query.value),
-          body: ConstString.checkSpelling,
-          extra: controller.suggestions.isEmpty
-              ? null
-              : [
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: AppSpacing.s2.w,
-                    runSpacing: AppSpacing.s2.h,
-                    children: controller.suggestions
-                        .map((w) => _ChipButton(label: w, onTap: () => onOpenWord(w)))
-                        .toList(),
-                  ),
-                ],
-        ),
+    return Obx(
+      () => EmptyStateWidget(
+        icon: Icons.search_off_rounded,
+        title: ConstString.noMatchesFor.replaceAll('%s', controller.query.value),
+        body: ConstString.checkSpelling,
+        extra: controller.suggestions.isEmpty
+            ? null
+            : [
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: AppSpacing.s2.w,
+                  runSpacing: AppSpacing.s2.h,
+                  children: controller.suggestions
+                      .map((w) => _ChipButton(label: w, onTap: () => onOpenWord(w)))
+                      .toList(),
+                ),
+              ],
       ),
     );
   }

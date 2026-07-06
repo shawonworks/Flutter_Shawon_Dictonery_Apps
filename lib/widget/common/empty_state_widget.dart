@@ -29,50 +29,61 @@ class EmptyStateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tint = isError ? AppColors.brick : AppColors.marigold;
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppSpacing.s6.w, vertical: AppSpacing.s10.h),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: 72.w,
-            height: 72.w,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: isError ? AppColors.brickDim : AppColors.bgPaperSunken,
-            ),
-            child: Icon(icon, size: 32.sp, color: tint),
-          ),
-          SizedBox(height: AppSpacing.s5.h),
-          Text(title, style: AppTypography.h2(), textAlign: TextAlign.center),
-          if (body != null) ...[
-            SizedBox(height: AppSpacing.s2.h),
-            CustomText(
-              title: body!,
-              textAlign: TextAlign.center,
-              textColor: AppColors.ink500,
-              textSize: 15.sp,
-              maxLine: 3,
-            ),
-          ],
-          if (extra != null) ...[SizedBox(height: AppSpacing.s4.h), ...extra!],
-          if (actionLabel != null && onAction != null) ...[
-            CustomElevatedButton(
-              onPressed: onAction,
-              width: 220,
-              height: 48,
-              color: AppColors.marigold,
-              buttonBorderRadius: AppRadius.lg,
-              top: AppSpacing.s6,
-              child: CustomText(
-                title: actionLabel!,
-                textColor: AppColors.ink900Fixed,
-                fontWeight: FontWeight.w600,
-                textSize: 15.sp,
+    return Center(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s6.w, vertical: AppSpacing.s10.h),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 72.w,
+              height: 72.w,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: isError ? AppColors.brickDim : AppColors.bgPaperSunken,
               ),
+              child: Icon(icon, size: 32.sp, color: tint),
             ),
+            SizedBox(height: AppSpacing.s5.h),
+            Text(
+              title,
+              style: AppTypography.h2(),
+              textAlign: TextAlign.center,
+            ),
+            if (body != null) ...[
+              SizedBox(height: AppSpacing.s2.h),
+              CustomText(
+                title: body!,
+                textAlign: TextAlign.center,
+                textColor: AppColors.ink500,
+                textSize: 15.sp,
+                maxLine: 3,
+              ),
+            ],
+            if (extra != null) ...[
+              SizedBox(height: AppSpacing.s4.h),
+              ...extra!.map((e) => Center(child: e)),
+            ],
+            if (actionLabel != null && onAction != null) ...[
+              CustomElevatedButton(
+                onPressed: onAction,
+                width: 220,
+                height: 48,
+                color: AppColors.marigold,
+                buttonBorderRadius: AppRadius.lg,
+                top: AppSpacing.s6,
+                child: CustomText(
+                  title: actionLabel!,
+                  textColor: AppColors.ink900Fixed,
+                  fontWeight: FontWeight.w600,
+                  textSize: 15.sp,
+                ),
+              ),
+            ],
           ],
-        ],
+        ),
       ),
     );
   }
