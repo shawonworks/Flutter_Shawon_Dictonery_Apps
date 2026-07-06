@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import '../../../data/exceptions/dictionary_exceptions.dart';
+import '../../../data/models/meaning.dart';
 import '../../../data/models/word_entry.dart';
 import '../../../data/repositories/dictionary_repository.dart';
 import '../../../data/repositories/favorites_repository.dart';
@@ -119,6 +120,25 @@ class WordDetailController extends GetxController {
   String get sharePreviewText {
     final e = entry.value;
     if (e == null) return '';
-    return '${e.headword} ${e.phonetic}\n${e.previewDefinition}';
+
+    final pos = partOfSpeechShortCode(e.primaryPartOfSpeech);
+    final headwordLine = pos.isNotEmpty ? '${e.headword} ($pos)' : e.headword;
+
+    String? example;
+    for (final meaning in e.meanings) {
+      for (final def in meaning.definitions) {
+        if (def.example != null && def.example!.isNotEmpty) {
+          example = def.example;
+          break;
+        }
+      }
+      if (example != null) break;
+    }
+
+    return [
+      headwordLine,
+      if (e.bnHeadword != null) e.bnHeadword!,
+      if (example != null) '"$example"',
+    ].join('\n');
   }
 }

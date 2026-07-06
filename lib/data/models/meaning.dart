@@ -19,6 +19,22 @@ PartOfSpeech partOfSpeechFromString(String value) {
 
 String partOfSpeechToString(PartOfSpeech pos) => pos.name;
 
+String partOfSpeechShortCode(PartOfSpeech pos) {
+  switch (pos) {
+    case PartOfSpeech.noun:
+      return 'n';
+    case PartOfSpeech.verb:
+      return 'v';
+    case PartOfSpeech.adjective:
+      return 'adj';
+    case PartOfSpeech.adverb:
+      return 'adv';
+    case PartOfSpeech.other:
+      return '';
+  }
+}
+
+
 class Meaning {
   final PartOfSpeech partOfSpeech;
   final List<Definition> definitions;
