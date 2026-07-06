@@ -7,8 +7,8 @@ class AppTheme {
 
   static ThemeData _build({required Brightness brightness}) {
     final isDark = brightness == Brightness.dark;
-    final scaffoldBg = isDark ? const Color(0xFF14161D) : const Color(0xFFFAF7F1);
-    final primary = isDark ? const Color(0xFFF2AA55) : const Color(0xFFEE9C3A);
+    final scaffoldBg = isDark ? const Color(0xFF12140F) : const Color(0xFFF6F5F1);
+    final primary = isDark ? const Color(0xFF4F9C74) : const Color(0xFF2F6E4F);
 
     return ThemeData(
       useMaterial3: true,

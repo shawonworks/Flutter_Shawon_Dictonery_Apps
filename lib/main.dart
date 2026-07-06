@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'core/bindings/initial_binding.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/text_scale_controller.dart';
@@ -9,6 +10,7 @@ import 'routes/app_routes.dart';
 import 'routes/app_routes_file.dart';
 
 void main() {
+  GoogleFonts.config.allowRuntimeFetching = true;
   runApp(const LexiconApp());
 }
 
@@ -22,6 +24,7 @@ class LexiconApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return GetMaterialApp(
+
           title: ConstString.appName,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light,
