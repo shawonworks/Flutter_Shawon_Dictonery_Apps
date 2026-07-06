@@ -12,11 +12,14 @@ import '../../history/controllers/history_controller.dart';
 enum WordDetailErrorType { none, notFound, network }
 
 class WordDetailController extends GetxController {
-  final DictionaryRepository _dictionaryRepository = Get.find<DictionaryRepository>();
-  final FavoritesRepository _favoritesRepository = Get.find<FavoritesRepository>();
+  final DictionaryRepository _dictionaryRepository =
+      Get.find<DictionaryRepository>();
+  final FavoritesRepository _favoritesRepository =
+      Get.find<FavoritesRepository>();
   final HistoryRepository _historyRepository = Get.find<HistoryRepository>();
 
   final String headword;
+
   WordDetailController({required this.headword});
 
   final Rx<WordEntry?> entry = Rx<WordEntry?>(null);
@@ -114,7 +117,8 @@ class WordDetailController extends GetxController {
       return;
     }
     isPlayingAudio.value = true;
-    _audioTimer = Timer(const Duration(milliseconds: 1500), () => isPlayingAudio.value = false);
+    _audioTimer = Timer(
+        const Duration(milliseconds: 1500), () => isPlayingAudio.value = false);
   }
 
   String get sharePreviewText {
@@ -135,10 +139,15 @@ class WordDetailController extends GetxController {
       if (example != null) break;
     }
 
+    final synonyms = e.synonyms.take(3).toList();
+    final antonyms = e.antonyms.take(3).toList();
+
     return [
-      headwordLine,
-      if (e.bnHeadword != null) e.bnHeadword!,
-      if (example != null) '"$example"',
+      'Word: $headwordLine',
+      if (e.bnHeadword != null) 'Meaning: ${e.bnHeadword!}',
+      if (example != null) 'Example: "$example"',
+      if (synonyms.isNotEmpty) 'Synonyms: ${synonyms.join(', ')}',
+      if (antonyms.isNotEmpty) 'Antonyms: ${antonyms.join(', ')}',
     ].join('\n');
   }
 }
