@@ -79,6 +79,7 @@ class IeltsParaphraseScreen extends GetView<IeltsParaphraseController> {
                           CustomElevatedButton(
                             onPressed: controller.reveal,
                             isOutLined: true,
+                            elevation: 0,
                             outLineColour: AppColors.marigold,
                             height: 44,
                             buttonBorderRadius: AppRadius.lg,
@@ -111,6 +112,7 @@ class IeltsParaphraseScreen extends GetView<IeltsParaphraseController> {
                     child: CustomElevatedButton(
                       onPressed: controller.currentIndex.value > 0 ? controller.previous : null,
                       isOutLined: true,
+                      elevation: 0,
                       outLineColour: AppColors.ink100,
                       height: 48,
                       buttonBorderRadius: AppRadius.lg,

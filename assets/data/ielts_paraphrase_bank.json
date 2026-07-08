@@ -1,0 +1,35 @@
+{
+  "exercises": [
+    { "id": "para_edu_1", "topic": "education", "original": "The university revised its curriculum to include more practical modules.", "targetWord": "curriculum", "hintSynonyms": ["syllabus", "coursework"], "sampleParaphrase": "The university updated its syllabus to add more hands-on modules." },
+    { "id": "para_edu_2", "topic": "education", "original": "Attendance at these lectures is mandatory.", "targetWord": "mandatory", "hintSynonyms": ["compulsory", "obligatory"], "sampleParaphrase": "Students are required to attend these lectures." },
+    { "id": "para_edu_3", "topic": "education", "original": "A significant portion of the rural population remains illiterate.", "targetWord": "illiterate", "hintSynonyms": ["uneducated"], "sampleParaphrase": "A large share of people in rural areas still cannot read or write." },
+
+    { "id": "para_health_1", "topic": "health", "original": "Childhood obesity rates have doubled in the last decade.", "targetWord": "obesity", "hintSynonyms": ["overweight"], "sampleParaphrase": "The number of overweight children has doubled over the past ten years." },
+    { "id": "para_health_2", "topic": "health", "original": "A sedentary lifestyle increases the risk of heart disease.", "targetWord": "sedentary", "hintSynonyms": ["inactive"], "sampleParaphrase": "Living an inactive lifestyle raises the chances of developing heart disease." },
+    { "id": "para_health_3", "topic": "health", "original": "Diabetes is a chronic condition that requires lifelong management.", "targetWord": "chronic", "hintSynonyms": ["persistent", "long-term"], "sampleParaphrase": "Diabetes is a long-term illness that needs to be managed for life." },
+
+    { "id": "para_tech_1", "topic": "technology", "original": "Artificial intelligence is reshaping many industries.", "targetWord": "artificial", "hintSynonyms": ["synthetic", "man-made"], "sampleParaphrase": "Machine-based intelligence is transforming numerous sectors." },
+    { "id": "para_tech_2", "topic": "technology", "original": "Many factory workers were made redundant due to automation.", "targetWord": "redundant", "hintSynonyms": ["superfluous", "unnecessary"], "sampleParaphrase": "Automation has left many factory workers without jobs." },
+    { "id": "para_tech_3", "topic": "technology", "original": "Companies are investing more in cybersecurity than ever before.", "targetWord": "cybersecurity", "hintSynonyms": ["data protection"], "sampleParaphrase": "Firms are spending more on protecting their data than at any time in the past." },
+
+    { "id": "para_env_1", "topic": "environment", "original": "The company adopted sustainable manufacturing practices.", "targetWord": "sustainable", "hintSynonyms": ["renewable"], "sampleParaphrase": "The company began manufacturing in ways that do not deplete resources." },
+    { "id": "para_env_2", "topic": "environment", "original": "New policies aim to mitigate the effects of climate change.", "targetWord": "mitigate", "hintSynonyms": ["alleviate", "reduce"], "sampleParaphrase": "New policies are designed to lessen the impact of climate change." },
+    { "id": "para_env_3", "topic": "environment", "original": "Deforestation is a major cause of habitat loss.", "targetWord": "deforestation", "hintSynonyms": ["logging"], "sampleParaphrase": "The clearing of forests is one of the main reasons animals lose their habitats." },
+
+    { "id": "para_work_1", "topic": "work", "original": "Unemployment rates rose sharply during the recession.", "targetWord": "unemployment", "hintSynonyms": ["joblessness"], "sampleParaphrase": "The number of people without jobs rose sharply during the economic downturn." },
+    { "id": "para_work_2", "topic": "work", "original": "Inflation has eroded people's purchasing power.", "targetWord": "inflation", "hintSynonyms": ["price rise"], "sampleParaphrase": "Rising prices have reduced how much people can buy with their money." },
+    { "id": "para_work_3", "topic": "work", "original": "Remote work has been shown to increase productivity for some employees.", "targetWord": "productivity", "hintSynonyms": ["efficiency"], "sampleParaphrase": "Working from home has been found to boost efficiency for certain staff." },
+
+    { "id": "para_soc_1", "topic": "society", "original": "The city is known for its cultural diversity.", "targetWord": "diversity", "hintSynonyms": ["variety"], "sampleParaphrase": "The city is famous for having such a wide variety of cultures." },
+    { "id": "para_soc_2", "topic": "society", "original": "Laws exist to prevent discrimination in the workplace.", "targetWord": "discrimination", "hintSynonyms": ["prejudice"], "sampleParaphrase": "Legislation is in place to stop unfair treatment of employees at work." },
+    { "id": "para_soc_3", "topic": "society", "original": "Income inequality has widened significantly in recent years.", "targetWord": "inequality", "hintSynonyms": ["disparity"], "sampleParaphrase": "The gap between rich and poor has grown considerably in recent years." },
+
+    { "id": "para_travel_1", "topic": "travel", "original": "Bali remains a popular tourist destination.", "targetWord": "destination", "hintSynonyms": ["spot", "location"], "sampleParaphrase": "Bali continues to be a favourite place for tourists to visit." },
+    { "id": "para_travel_2", "topic": "travel", "original": "Travelers seek authentic local experiences rather than tourist traps.", "targetWord": "authentic", "hintSynonyms": ["genuine"], "sampleParaphrase": "Tourists look for genuine local experiences instead of overly commercial ones." },
+    { "id": "para_travel_3", "topic": "travel", "original": "Traffic congestion in tourist areas peaks during holidays.", "targetWord": "congestion", "hintSynonyms": ["overcrowding"], "sampleParaphrase": "Tourist areas become most overcrowded with traffic during holiday periods." },
+
+    { "id": "para_crime_1", "topic": "crime", "original": "Harsher penalties are seen as a deterrent to crime.", "targetWord": "deterrent", "hintSynonyms": ["discouragement"], "sampleParaphrase": "Stricter punishments are believed to discourage people from committing crimes." },
+    { "id": "para_crime_2", "topic": "crime", "original": "Rehabilitation programs help reduce reoffending rates.", "targetWord": "rehabilitation", "hintSynonyms": ["reform"], "sampleParaphrase": "Programs that reform offenders help lower the rate at which they commit further crimes." },
+    { "id": "para_crime_3", "topic": "crime", "original": "New legislation was passed to combat cybercrime.", "targetWord": "legislation", "hintSynonyms": ["law"], "sampleParaphrase": "New laws were introduced to fight crimes committed online." }
+  ]
+}
