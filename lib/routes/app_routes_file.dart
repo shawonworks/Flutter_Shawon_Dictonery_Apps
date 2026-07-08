@@ -2,6 +2,10 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../modules/ielts/hub/views/ielts_daily_challenge_binding.dart';
 import '../modules/ielts/hub/views/ielts_daily_challenge_screen.dart';
 import '../modules/ielts/hub/views/ielts_hub_screen.dart';
+import '../modules/ielts/hub/views/ielts_mini_test_binding.dart';
+import '../modules/ielts/hub/views/ielts_mini_test_screen.dart';
+import '../modules/ielts/hub/views/ielts_paraphrase_binding.dart';
+import '../modules/ielts/hub/views/ielts_paraphrase_screen.dart';
 import '../modules/ielts/hub/views/ielts_progress_binding.dart';
 import '../modules/ielts/hub/views/ielts_progress_screen.dart';
 import '../modules/ielts/hub/views/ielts_topic_picker_binding.dart';
@@ -54,5 +58,15 @@ List<GetPage> appRouteFile = <GetPage>[
     name: AppRoutes.ieltsProgressScreen,
     page: () => const IeltsProgressScreen(),
     binding: IeltsProgressBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.ieltsParaphraseScreen,
+    page: () => const IeltsParaphraseScreen(),
+    binding: IeltsParaphraseBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.ieltsMiniTestScreen,
+    page: () => const IeltsMiniTestScreen(),
+    binding: IeltsMiniTestBinding(),
   ),
 ];

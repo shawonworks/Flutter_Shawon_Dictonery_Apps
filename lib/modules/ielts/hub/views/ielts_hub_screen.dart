@@ -45,15 +45,17 @@ class IeltsHubScreen extends StatelessWidget {
           arguments: {'title': 'Cambridge Word Bank', 'mode': 'highFrequency'},
         ),
       ),
-      const _FeatureDef(
+      _FeatureDef(
         icon: Icons.edit_note_rounded,
         title: 'Paraphrasing Practice',
-        subtitle: 'Sentence rewrite practice — coming soon',
+        subtitle: 'Sentence rewrite practice',
+        onTap: () => Get.toNamed(AppRoutes.ieltsParaphraseScreen),
       ),
-      const _FeatureDef(
+      _FeatureDef(
         icon: Icons.quiz_rounded,
         title: 'Mini Tests',
-        subtitle: 'MCQ & fill in the blanks — coming soon',
+        subtitle: 'MCQ & fill in the blanks',
+        onTap: () => Get.toNamed(AppRoutes.ieltsMiniTestScreen),
       ),
       _FeatureDef(
         icon: Icons.calendar_today_rounded,

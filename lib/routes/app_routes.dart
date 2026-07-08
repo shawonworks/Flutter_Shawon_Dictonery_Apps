@@ -21,4 +21,6 @@ class AppRoutes {
   static const ieltsWordListScreen = '/ieltsWordListScreen';
   static const ieltsDailyChallengeScreen = '/ieltsDailyChallengeScreen';
   static const ieltsProgressScreen = '/ieltsProgressScreen';
+  static const ieltsParaphraseScreen = '/ieltsParaphraseScreen';
+  static const ieltsMiniTestScreen = '/ieltsMiniTestScreen';
 }

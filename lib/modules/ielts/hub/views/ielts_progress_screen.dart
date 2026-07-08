@@ -73,6 +73,32 @@ class IeltsProgressScreen extends GetView<IeltsProgressController> {
                 ),
               ],
             ),
+            SizedBox(height: AppSpacing.s3.h),
+            Row(
+              children: [
+                Expanded(
+                  child: _StatCard(
+                    icon: Icons.track_changes_rounded,
+                    iconColor: AppColors.sage,
+                    label: 'Test Accuracy',
+                    value: controller.accuracy.value.totalTestsCompleted > 0
+                        ? '${controller.accuracy.value.averageAccuracyPercent.round()}%'
+                        : '—',
+                    suffix: 'average',
+                  ),
+                ),
+                SizedBox(width: AppSpacing.s3.w),
+                Expanded(
+                  child: _StatCard(
+                    icon: Icons.quiz_rounded,
+                    iconColor: AppColors.ink500,
+                    label: 'Tests Taken',
+                    value: '${controller.accuracy.value.totalTestsCompleted}',
+                    suffix: 'total',
+                  ),
+                ),
+              ],
+            ),
             SizedBox(height: AppSpacing.s6.h),
             CustomElevatedButton(
               onPressed: () =>

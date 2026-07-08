@@ -6,7 +6,9 @@ import '../../data/datasources/translation_service.dart';
 import '../../data/repositories/dictionary_repository.dart';
 import '../../data/repositories/favorites_repository.dart';
 import '../../data/repositories/history_repository.dart';
+import '../../data/repositories/ielts_paraphrase_repository.dart';
 import '../../data/repositories/ielts_progress_repository.dart';
+import '../../data/repositories/ielts_test_result_repository.dart';
 import '../../data/repositories/ielts_word_bank_repository.dart';
 import '../../data/repositories/word_cache_repository.dart';
 import '../theme/theme_controller.dart';
@@ -34,6 +36,8 @@ class InitialBinding extends Bindings {
       IeltsProgressRepository(wordBank: Get.find<IeltsWordBankRepository>()),
       permanent: true,
     );
+    Get.put(IeltsParaphraseRepository(), permanent: true);
+    Get.put(IeltsTestResultRepository(), permanent: true);
 
     Get.put<DictionaryRepository>(
       LiveDictionaryRepository(
