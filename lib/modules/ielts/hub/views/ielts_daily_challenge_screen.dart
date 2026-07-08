@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_tokens.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/utils/tts_helper.dart';
 import '../../../../widget/appbar/global_app_bar.dart';
 import '../../../../widget/common/skeleton_loader.dart';
 import '../../../../widget/dictionary/pos_chip.dart';
@@ -115,6 +116,11 @@ class _ChallengeWordRow extends StatelessWidget {
                       Flexible(child: Text(entry.headword, style: AppTypography.headwordMd())),
                       SizedBox(width: AppSpacing.s2.w),
                       PosChip(partOfSpeech: entry.partOfSpeech),
+                      const Spacer(),
+                      GestureDetector(
+                        onTap: () => TtsHelper.speak(entry.headword),
+                        child: Icon(Icons.volume_up_rounded, size: 20.sp, color: AppColors.marigold),
+                      ),
                     ],
                   ),
                   SizedBox(height: 2.h),

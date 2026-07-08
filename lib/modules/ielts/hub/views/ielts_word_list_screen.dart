@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_tokens.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/utils/tts_helper.dart';
 import '../../../../widget/appbar/global_app_bar.dart';
 import '../../../../widget/common/empty_state_widget.dart';
 import '../../../../widget/common/skeleton_loader.dart';
@@ -75,6 +76,11 @@ class _WordCard extends StatelessWidget {
               Flexible(child: Text(entry.headword, style: AppTypography.headwordMd())),
               SizedBox(width: AppSpacing.s2.w),
               PosChip(partOfSpeech: entry.partOfSpeech),
+              const Spacer(),
+              IconButton(
+                icon: Icon(Icons.volume_up_rounded, size: 20.sp, color: AppColors.marigold),
+                onPressed: () => TtsHelper.speak(entry.headword),
+              ),
             ],
           ),
           SizedBox(height: 4.h),

@@ -18,6 +18,8 @@ dependencies:
   translator: ^1.0.4+1
   share_plus: ^13.2.0
   package_info_plus: ^10.2.0
+  audioplayers: ^6.8.1
+  flutter_tts: ^4.2.2
 
 dev_dependencies:
   flutter_test:

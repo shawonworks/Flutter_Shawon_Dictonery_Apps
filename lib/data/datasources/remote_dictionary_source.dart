@@ -50,7 +50,7 @@ class RemoteDictionarySource {
       }
       final audio = map['audio'] as String?;
       if (audioUrl == null && audio != null && audio.isNotEmpty) {
-        audioUrl = audio;
+        audioUrl = audio.startsWith('//') ? 'https:$audio' : audio;
       }
     }
 

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import '../../data/datasources/local_wordlist_source.dart';
@@ -11,12 +12,9 @@ import '../../data/repositories/ielts_progress_repository.dart';
 import '../../data/repositories/ielts_test_result_repository.dart';
 import '../../data/repositories/ielts_word_bank_repository.dart';
 import '../../data/repositories/word_cache_repository.dart';
+import '../../data/services/voice_service.dart';
 import '../theme/theme_controller.dart';
 import '../theme/text_scale_controller.dart';
-
-import 'dart:convert';
-import 'package:dio/dio.dart';
-// ...existing imports
 
 class InitialBinding extends Bindings {
   @override
@@ -51,5 +49,6 @@ class InitialBinding extends Bindings {
 
     Get.put(ThemeController(), permanent: true);
     Get.put(TextScaleController(), permanent: true);
+    Get.put(VoiceService(), permanent: true);
   }
 }
