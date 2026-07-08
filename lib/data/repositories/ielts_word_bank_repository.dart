@@ -7,6 +7,7 @@ class IeltsWordBankRepository {
   List<IeltsTopic>? _topics;
   List<IeltsWordEntry>? _words;
 
+
   Future<void> _ensureLoaded() async {
     if (_topics != null && _words != null) return;
     final raw = await rootBundle.loadString('assets/data/ielts_word_bank.json');

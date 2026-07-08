@@ -8,7 +8,7 @@ import '../../../../routes/app_routes.dart';
 import '../../../../widget/appbar/global_app_bar.dart';
 import '../../../../widget/button/custom_elevated_button.dart';
 import '../../../../widget/text/custom_text.dart';
-import '../controllers/ielts_progress_controller.dart';
+import 'ielts_progress_controller.dart';
 
 class IeltsProgressScreen extends GetView<IeltsProgressController> {
   const IeltsProgressScreen({super.key});

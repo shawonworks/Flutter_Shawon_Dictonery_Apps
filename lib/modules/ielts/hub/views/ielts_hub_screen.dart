@@ -55,15 +55,17 @@ class IeltsHubScreen extends StatelessWidget {
         title: 'Mini Tests',
         subtitle: 'MCQ & fill in the blanks — coming soon',
       ),
-      const _FeatureDef(
+      _FeatureDef(
         icon: Icons.calendar_today_rounded,
         title: 'Daily Word Challenge',
-        subtitle: '10 words a day + streak — coming soon',
+        subtitle: "Today's 10 words + streak",
+        onTap: () => Get.toNamed(AppRoutes.ieltsDailyChallengeScreen),
       ),
-      const _FeatureDef(
+      _FeatureDef(
         icon: Icons.insights_rounded,
         title: 'Progress Tracker',
-        subtitle: 'Accuracy & streak history — coming soon',
+        subtitle: 'Accuracy & streak history',
+        onTap: () => Get.toNamed(AppRoutes.ieltsProgressScreen),
       ),
     ];
 

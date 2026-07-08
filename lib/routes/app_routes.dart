@@ -19,4 +19,6 @@ class AppRoutes {
   static const ieltsHubScreen = '/ieltsHubScreen';
   static const ieltsTopicPickerScreen = '/ieltsTopicPickerScreen';
   static const ieltsWordListScreen = '/ieltsWordListScreen';
+  static const ieltsDailyChallengeScreen = '/ieltsDailyChallengeScreen';
+  static const ieltsProgressScreen = '/ieltsProgressScreen';
 }
