@@ -1,5 +1,5 @@
-name: lexicon
-description: Lexicon — a personal-reference-book style dictionary app.
+name: lexora
+description: Lexora — a personal-reference-book style dictionary app.
 publish_to: "none"
 version: 1.0.0+1
 
@@ -20,6 +20,28 @@ dependencies:
   package_info_plus: ^10.2.0
   audioplayers: ^6.8.1
   flutter_tts: ^4.2.2
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  remove_alpha_ios: true
+  min_sdk_android: 21
+  adaptive_icon_background: "#F6F5F1"
+  adaptive_icon_foreground: "assets/images/app_icon.png"
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    background_color: "#F6F5F1"
+    theme_color: "#2F6E4F"
+  windows:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    icon_size: 256
+  macos:
+    generate: true
+    image_path: "assets/images/app_icon.png"
 
 dev_dependencies:
   flutter_test:
