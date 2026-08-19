@@ -1,4 +1,4 @@
-# Lexicon — Dictionary App
+# Lexora — Dictionary App
 
 Flutter + GetX implementation of the "Annotated Paper" design spec.
 Fully offline: no auth, no backend, local JSON dataset + SharedPreferences.
@@ -9,7 +9,7 @@ This is a `lib/` + `assets/` source tree only — platform folders are not
 generated. From this directory:
 
 ```bash
-flutter create . --project-name lexicon --org com.lexicon
+flutter create . --project-name lexora --org com.lexora
 flutter pub get
 flutter run
 ```
