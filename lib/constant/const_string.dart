@@ -2,7 +2,7 @@ class ConstString {
   ConstString._();
 
   //////////////// App /////////////////////
-  static const appName = 'Lexicon';
+  static const appName = 'Lexora';
 
   //////////////// Onboarding /////////////////////
   static const onboardTitle1 = 'Look up any word,\ninstantly';
