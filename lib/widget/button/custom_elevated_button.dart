@@ -85,7 +85,7 @@ class CustomElevatedButton extends StatelessWidget {
 
         // --- Elevated Button ---
         child: ElevatedButton(
-          onPressed: onPressed ?? () => print("Elevated Button Pressed"),
+          onPressed: onPressed,
           style: (isOutLined)
               ? _outlinedButtonStyle(
             fontSize.sp,
