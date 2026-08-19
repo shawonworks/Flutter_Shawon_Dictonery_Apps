@@ -24,7 +24,7 @@ class IeltsDailyChallengeController extends GetxController {
     final loadedWords = await _repo.todayChallengeWords();
     final loadedTicked = await _repo.tickedHeadwordsToday();
     words.value = loadedWords;
-    ticked.value = loadedTicked;
+    ticked.assignAll(loadedTicked);
     isLoading.value = false;
   }
 
