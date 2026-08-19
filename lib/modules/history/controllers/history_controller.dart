@@ -5,14 +5,14 @@ import '../../../data/repositories/history_repository.dart';
 
 class HistoryGroup {
   final String label;
-  final List<_HistoryItem> items;
+  final List<HistoryItem> items;
   const HistoryGroup({required this.label, required this.items});
 }
 
-class _HistoryItem {
+class HistoryItem {
   final WordEntry entry;
   final DateTime viewedAt;
-  const _HistoryItem({required this.entry, required this.viewedAt});
+  const HistoryItem({required this.entry, required this.viewedAt});
 }
 
 class HistoryController extends GetxController {
@@ -31,11 +31,11 @@ class HistoryController extends GetxController {
   Future<void> refresh_() async {
     isLoading.value = true;
     final records = await _historyRepository.getAll();
-    final items = <_HistoryItem>[];
+    final items = <HistoryItem>[];
     for (final record in records) {
       try {
         final entry = await _dictionaryRepository.fetchDetail(record.headword);
-        items.add(_HistoryItem(entry: entry, viewedAt: record.viewedAt));
+        items.add(HistoryItem(entry: entry, viewedAt: record.viewedAt));
       } catch (_) {
         // Word can't be resolved right now (offline + not cached) —
         // skip it rather than breaking the whole list.
@@ -45,12 +45,12 @@ class HistoryController extends GetxController {
     isLoading.value = false;
   }
 
-  List<HistoryGroup> _groupByDay(List<_HistoryItem> items) {
+  List<HistoryGroup> _groupByDay(List<HistoryItem> items) {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     final yesterday = today.subtract(const Duration(days: 1));
 
-    final buckets = <String, List<_HistoryItem>>{};
+    final buckets = <String, List<HistoryItem>>{};
     for (final item in items) {
       final d = item.viewedAt;
       final day = DateTime(d.year, d.month, d.day);
