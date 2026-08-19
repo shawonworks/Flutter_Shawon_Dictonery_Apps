@@ -40,7 +40,7 @@ class SettingsScreen extends GetView<SettingsController> {
               onTap: () => _openTextSizeSheet(context),
             ),
           ),
-          _SectionHeader(ConstString.data),
+          const _SectionHeader(ConstString.data),
           _SettingsRow(
             label: ConstString.clearSearchHistory,
             destructive: true,
@@ -63,7 +63,7 @@ class SettingsScreen extends GetView<SettingsController> {
               if (confirmed) controller.clearAllFavorites();
             },
           ),
-          _SectionHeader(ConstString.about),
+          const _SectionHeader(ConstString.about),
           FutureBuilder<PackageInfo>(
             future: PackageInfo.fromPlatform(),
             builder: (context, snapshot) => _SettingsRow(
@@ -160,7 +160,7 @@ class _PickerSheet extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(AppSpacing.s5.w, AppSpacing.s3.h, AppSpacing.s5.w, AppSpacing.s8.h),
       decoration: BoxDecoration(
         color: AppColors.bgPaperRaised,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadius.lg)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.lg)),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -168,7 +168,7 @@ class _PickerSheet extends StatelessWidget {
           Container(
             width: 36.w,
             height: 4.h,
-            decoration: BoxDecoration(color: AppColors.ink100, borderRadius: BorderRadius.circular(AppRadius.pill)),
+            decoration: BoxDecoration(color: AppColors.ink100, borderRadius: const BorderRadius.all(Radius.circular(AppRadius.pill))),
           ),
           SizedBox(height: AppSpacing.s5.h),
           child,
