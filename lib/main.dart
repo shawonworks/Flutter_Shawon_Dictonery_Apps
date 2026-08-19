@@ -11,11 +11,11 @@ import 'routes/app_routes_file.dart';
 
 void main() {
   GoogleFonts.config.allowRuntimeFetching = true;
-  runApp(const LexiconApp());
+  runApp(const LexoraApp());
 }
 
-class LexiconApp extends StatelessWidget {
-  const LexiconApp({super.key});
+class LexoraApp extends StatelessWidget {
+  const LexoraApp({super.key});
 
   @override
   Widget build(BuildContext context) {
